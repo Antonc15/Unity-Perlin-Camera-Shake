@@ -8,5 +8,6 @@ Attaches to the camera and handles the actual shaking
 
 ## CameraShaker.cs
 Attaches to a gameObject which utilizes camera shake, use this to initate Camera-Shakes. 
+If no CameraShake is attached to the component,all cameras with a CameraShake component are targeted.
 
 ![alt text](https://github.com/Antonc15/Unity-Perlin-Camera-Shake/blob/main/ReadMe%20Resources/Capture2.PNG?raw=true)
