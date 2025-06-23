@@ -15,7 +15,7 @@ public class CameraShake : MonoBehaviour
     [SerializeField] private bool rotLockZ = false;
 
     // static
-    private static List<CameraShake> camShakers = new List<CameraShake>();
+    private static List<CameraShake> camShakes = new List<CameraShake>();
 
     // instance
     private float duration = 0f;
@@ -32,12 +32,12 @@ public class CameraShake : MonoBehaviour
     // Methods \\
     private void OnEnable()
     {
-        camShakers.Add(this);
+        camShakes.Add(this);
     }
 
     private void OnDisable()
     {
-        camShakers.Remove(this);
+        camShakes.Remove(this);
     }
 
     private void LateUpdate()
@@ -120,9 +120,9 @@ public class CameraShake : MonoBehaviour
     public static void ShakeAll(ShakeProperties _shake)
     {
         // Walk backwards to enable element removal during iteration
-        for (int i = camShakers.Count - 1; i >= 0; i--)
+        for (int i = camShakes.Count - 1; i >= 0; i--)
         {
-            camShakers[i].Shake(_shake);
+            camShakes[i].Shake(_shake);
         }
     }
 
