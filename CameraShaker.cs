@@ -3,8 +3,8 @@ using UnityEngine;
 public class CameraShaker : MonoBehaviour
 {
     // Fields \\
-    [Tooltip("If a CameraShaker is not assigned, all cameras with a CameraShaker component are targeted.")]
-    public CameraShake camShaker;
+    [Tooltip("If a CameraShake is not assigned, all cameras with a CameraShake component are targeted.")]
+    public CameraShake camShake;
     public bool shakeOnStart = true;
 
     [Header("Shake Settings")]
@@ -41,9 +41,9 @@ public class CameraShaker : MonoBehaviour
             minFalloffDist,
             maxFalloffDist);
 
-        if (camShaker)
+        if (camShake)
         {
-            camShaker.Shake(shake);
+            camShake.Shake(shake);
         }
         else
         {
